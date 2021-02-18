@@ -1,7 +1,130 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8919eaa5-2d90-4ebc-a702-dda7e6f7a500" name="Default Changelist" comment="" />
+    <list default="true" id="8919eaa5-2d90-4ebc-a702-dda7e6f7a500" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Problems/Bank account/src/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Problems/Bank account/task-info.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Problems/Bank account/task-remote-info.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Problems/Bank account/task.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Problems/Employee/src/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Problems/Employee/task-info.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Problems/Employee/task-remote-info.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Problems/Employee/task.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Problems/Employees/src/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Problems/Employees/task-info.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Problems/Employees/task-remote-info.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Problems/Employees/task.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Problems/Find mistake/src/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Problems/Find mistake/task-info.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Problems/Find mistake/task-remote-info.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Problems/Find mistake/task.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Problems/Fix the non-compiled hierarchy/src/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Problems/Fix the non-compiled hierarchy/task-info.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Problems/Fix the non-compiled hierarchy/task-remote-info.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Problems/Fix the non-compiled hierarchy/task.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Problems/IntBinaryOperation/src/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Problems/IntBinaryOperation/task-info.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Problems/IntBinaryOperation/task-remote-info.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Problems/IntBinaryOperation/task.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Problems/Movie/src/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Problems/Movie/task-info.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Problems/Movie/task-remote-info.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Problems/Movie/task.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Problems/Overloading methods/src/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Problems/Overloading methods/task-info.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Problems/Overloading methods/task-remote-info.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Problems/Overloading methods/task.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Problems/Phone/src/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Problems/Phone/task-info.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Problems/Phone/task-remote-info.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Problems/Phone/task.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Problems/Print/src/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Problems/Print/task-info.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Problems/Print/task-remote-info.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Problems/Print/task.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Problems/Publication and its subclasses/src/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Problems/Publication and its subclasses/task-info.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Problems/Publication and its subclasses/task-remote-info.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Problems/Publication and its subclasses/task.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Problems/Publications/src/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Problems/Publications/task-info.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Problems/Publications/task-remote-info.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Problems/Publications/task.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Problems/Saying animals/src/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Problems/Saying animals/task-info.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Problems/Saying animals/task-remote-info.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Problems/Saying animals/task.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Problems/Shape hierarchy/src/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Problems/Shape hierarchy/task-info.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Problems/Shape hierarchy/task-remote-info.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Problems/Shape hierarchy/task.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Problems/Shapes area/src/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Problems/Shapes area/task-info.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Problems/Shapes area/task-remote-info.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Problems/Shapes area/task.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Problems/Time/src/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Problems/Time/task-info.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Problems/Time/task-remote-info.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Problems/Time/task.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Problems/Users and WebSites/src/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Problems/Users and WebSites/task-info.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Problems/Users and WebSites/task-remote-info.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Problems/Users and WebSites/task.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.2.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.6.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.6.1/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.6.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.6.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.6.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.6.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.6.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.6.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.6.1/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.6.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.6.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.6.1/javaCompile/classAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.6.1/javaCompile/jarAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.6.1/javaCompile/jarAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.6.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.6.1/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/6.6.1/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.6.1/javaCompile/taskHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/checksums.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/checksums/sha1-checksums.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/frameworkLessonHistory/storage.storageData" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/frameworkLessonHistory/storage.storageData" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/frameworkLessonHistory/storage.storageRecordIndex" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/frameworkLessonHistory/storage.storageRecordIndex" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Battleship/Fog of war/task-info.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/Battleship/Fog of war/task-info.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Battleship/Fog of war/task-remote-info.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/Battleship/Fog of war/task-remote-info.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Battleship/Friend or foe/task-info.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/Battleship/Friend or foe/task-info.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Battleship/Friend or foe/task-remote-info.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/Battleship/Friend or foe/task-remote-info.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Battleship/Take position!/task-remote-info.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/Battleship/Take position!/task-remote-info.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Battleship/The end of the war/task-info.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/Battleship/The end of the war/task-info.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Battleship/The end of the war/task-remote-info.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/Battleship/The end of the war/task-remote-info.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Battleship/The end of the war/task.html" beforeDir="false" afterPath="$PROJECT_DIR$/Battleship/The end of the war/task.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Battleship/The first shot/task-remote-info.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/Battleship/The first shot/task-remote-info.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Battleship/lesson-info.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/Battleship/lesson-info.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Battleship/task/build/classes/java/main/battleship/Board.class" beforeDir="false" afterPath="$PROJECT_DIR$/Battleship/task/build/classes/java/main/battleship/Board.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Battleship/task/build/classes/java/main/battleship/Boat.class" beforeDir="false" afterPath="$PROJECT_DIR$/Battleship/task/build/classes/java/main/battleship/Boat.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Battleship/task/build/classes/java/main/battleship/InputHandling.class" beforeDir="false" afterPath="$PROJECT_DIR$/Battleship/task/build/classes/java/main/battleship/InputHandling.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Battleship/task/build/classes/java/main/battleship/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/Battleship/task/build/classes/java/main/battleship/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Battleship/task/build/classes/java/test/Tests.class" beforeDir="false" afterPath="$PROJECT_DIR$/Battleship/task/build/classes/java/test/Tests.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Battleship/task/build/reports/tests/test/classes/Tests.html" beforeDir="false" afterPath="$PROJECT_DIR$/Battleship/task/build/reports/tests/test/classes/Tests.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Battleship/task/build/reports/tests/test/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Battleship/task/build/reports/tests/test/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Battleship/task/build/reports/tests/test/packages/default-package.html" beforeDir="false" afterPath="$PROJECT_DIR$/Battleship/task/build/reports/tests/test/packages/default-package.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Battleship/task/build/test-results/test/TEST-Tests.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Battleship/task/build/test-results/test/TEST-Tests.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Battleship/task/build/test-results/test/binary/output.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Battleship/task/build/test-results/test/binary/output.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Battleship/task/build/test-results/test/binary/output.bin.idx" beforeDir="false" afterPath="$PROJECT_DIR$/Battleship/task/build/test-results/test/binary/output.bin.idx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Battleship/task/build/test-results/test/binary/results.bin" beforeDir="false" afterPath="$PROJECT_DIR$/Battleship/task/build/test-results/test/binary/results.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Battleship/task/src/battleship/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/Battleship/task/src/battleship/Board.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Battleship/task/src/battleship/Boat.java" beforeDir="false" afterPath="$PROJECT_DIR$/Battleship/task/src/battleship/Boat.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Battleship/task/src/battleship/InputHandling.java" beforeDir="false" afterPath="$PROJECT_DIR$/Battleship/task/src/battleship/InputHandling.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Battleship/task/src/battleship/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Battleship/task/src/battleship/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Battleship/task/test/Tests.java" beforeDir="false" afterPath="$PROJECT_DIR$/Battleship/task/test/Tests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Problems/Count words/out/production/classes/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/Problems/Count words/out/production/classes/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Problems/lesson-info.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/Problems/lesson-info.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/course-remote-info.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/course-remote-info.yaml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -34,10 +157,14 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectCodeStyleSettingsMigration">
     <option name="version" value="1" />
   </component>
   <component name="ProjectId" id="1ndQdk2Zbg9DgRYZbUCyhlXXXgC" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -45,6 +172,11 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.smartKeys" />
     <property name="show.inlinked.gradle.project.popup" value="false" />
   </component>
   <component name="RecentsManager">
@@ -117,42 +249,56 @@
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
     <state x="734" y="355" key="#com.intellij.execution.impl.EditConfigurationsDialog/-1680.145.1680.1010/0.0.2560.1400@0.0.2560.1400" timestamp="1611915189558" />
-    <state width="2516" height="401" key="GridCell.Tab.0.bottom" timestamp="1612853073640">
+    <state x="1085" y="416" key="#com.intellij.ide.util.MemberChooser" timestamp="1613585951958">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2516" height="401" key="GridCell.Tab.0.bottom/-1680.145.1680.1010/0.0.2560.1400@0.0.2560.1400" timestamp="1612853073640" />
-    <state width="2516" height="401" key="GridCell.Tab.0.center" timestamp="1612853073640">
+    <state x="1085" y="416" key="#com.intellij.ide.util.MemberChooser/-1680.145.1680.1010/0.0.2560.1400@0.0.2560.1400" timestamp="1613585951958" />
+    <state x="1027" y="537" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1613637195958">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2516" height="401" key="GridCell.Tab.0.center/-1680.145.1680.1010/0.0.2560.1400@0.0.2560.1400" timestamp="1612853073640" />
-    <state width="2516" height="401" key="GridCell.Tab.0.left" timestamp="1612853073639">
+    <state x="1027" y="537" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/-1680.145.1680.1010/0.0.2560.1400@0.0.2560.1400" timestamp="1613637195958" />
+    <state width="2516" height="401" key="GridCell.Tab.0.bottom" timestamp="1613648203280">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2516" height="401" key="GridCell.Tab.0.left/-1680.145.1680.1010/0.0.2560.1400@0.0.2560.1400" timestamp="1612853073639" />
-    <state width="2516" height="401" key="GridCell.Tab.0.right" timestamp="1612853073640">
+    <state width="2516" height="401" key="GridCell.Tab.0.bottom/-1680.145.1680.1010/0.0.2560.1400@0.0.2560.1400" timestamp="1613648203280" />
+    <state width="2516" height="401" key="GridCell.Tab.0.center" timestamp="1613648203280">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2516" height="401" key="GridCell.Tab.0.right/-1680.145.1680.1010/0.0.2560.1400@0.0.2560.1400" timestamp="1612853073640" />
-    <state width="2516" height="492" key="GridCell.Tab.1.bottom" timestamp="1612778630922">
+    <state width="2516" height="401" key="GridCell.Tab.0.center/-1680.145.1680.1010/0.0.2560.1400@0.0.2560.1400" timestamp="1613648203280" />
+    <state width="2516" height="401" key="GridCell.Tab.0.left" timestamp="1613648203279">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2516" height="492" key="GridCell.Tab.1.bottom/-1680.145.1680.1010/0.0.2560.1400@0.0.2560.1400" timestamp="1612778630922" />
-    <state width="2516" height="492" key="GridCell.Tab.1.center" timestamp="1612778630922">
+    <state width="2516" height="401" key="GridCell.Tab.0.left/-1680.145.1680.1010/0.0.2560.1400@0.0.2560.1400" timestamp="1613648203279" />
+    <state width="2516" height="401" key="GridCell.Tab.0.right" timestamp="1613648203280">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2516" height="492" key="GridCell.Tab.1.center/-1680.145.1680.1010/0.0.2560.1400@0.0.2560.1400" timestamp="1612778630922" />
-    <state width="2516" height="492" key="GridCell.Tab.1.left" timestamp="1612778630922">
+    <state width="2516" height="401" key="GridCell.Tab.0.right/-1680.145.1680.1010/0.0.2560.1400@0.0.2560.1400" timestamp="1613648203280" />
+    <state width="2516" height="492" key="GridCell.Tab.1.bottom" timestamp="1613383650816">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2516" height="492" key="GridCell.Tab.1.left/-1680.145.1680.1010/0.0.2560.1400@0.0.2560.1400" timestamp="1612778630922" />
-    <state width="2516" height="492" key="GridCell.Tab.1.right" timestamp="1612778630922">
+    <state width="2516" height="492" key="GridCell.Tab.1.bottom/-1680.145.1680.1010/0.0.2560.1400@0.0.2560.1400" timestamp="1613383650816" />
+    <state width="2516" height="492" key="GridCell.Tab.1.center" timestamp="1613383650816">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state width="2516" height="492" key="GridCell.Tab.1.right/-1680.145.1680.1010/0.0.2560.1400@0.0.2560.1400" timestamp="1612778630922" />
-    <state x="976" y="524" key="com.intellij.ide.util.TipDialog" timestamp="1613248165635">
+    <state width="2516" height="492" key="GridCell.Tab.1.center/-1680.145.1680.1010/0.0.2560.1400@0.0.2560.1400" timestamp="1613383650816" />
+    <state width="2516" height="492" key="GridCell.Tab.1.left" timestamp="1613383650816">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>
-    <state x="976" y="524" key="com.intellij.ide.util.TipDialog/-1680.145.1680.1010/0.0.2560.1400@0.0.2560.1400" timestamp="1613248165635" />
+    <state width="2516" height="492" key="GridCell.Tab.1.left/-1680.145.1680.1010/0.0.2560.1400@0.0.2560.1400" timestamp="1613383650816" />
+    <state width="2516" height="492" key="GridCell.Tab.1.right" timestamp="1613383650816">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state width="2516" height="492" key="GridCell.Tab.1.right/-1680.145.1680.1010/0.0.2560.1400@0.0.2560.1400" timestamp="1613383650816" />
+    <state x="520" y="204" key="SettingsEditor" timestamp="1613320397027">
+      <screen x="0" y="0" width="2560" height="1400" />
+    </state>
+    <state x="-1339" y="292" key="SettingsEditor/-1680.145.1680.1010/0.0.2560.1400@-1680.145.1680.1010" timestamp="1613254997548" />
+    <state x="520" y="204" key="SettingsEditor/-1680.145.1680.1010/0.0.2560.1400@0.0.2560.1400" timestamp="1613320397027" />
+    <state x="-1039" y="523" key="com.intellij.ide.util.TipDialog" timestamp="1613632749112">
+      <screen x="-1680" y="145" width="1680" height="1010" />
+    </state>
+    <state x="-1039" y="523" key="com.intellij.ide.util.TipDialog/-1680.145.1680.1010/0.0.2560.1400@-1680.145.1680.1010" timestamp="1613462417336" />
+    <state x="-1039" y="523" key="com.intellij.ide.util.TipDialog/-1680.145.1680.1010/0.0.2560.1400@0.0.2560.1400" timestamp="1613632749112" />
     <state x="943" y="315" width="672" height="678" key="search.everywhere.popup" timestamp="1611918658789">
       <screen x="0" y="0" width="2560" height="1400" />
     </state>

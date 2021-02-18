@@ -1,69 +1,84 @@
 package battleship;
 
-import java.util.ArrayList;
 import java.util.List;
 
+import static battleship.InputHandling.playerTurnChange;
+
 public class Main {
+
+    static Board boardP1 = new Board();
+    static Board fogOfWarP1 = new Board();
+    static Board fogOfWarP2 = new Board();
+    static Board boardP2 = new Board();
+    static Boat aircraftCarrier = new AircraftCarrier();
+    static Boat battleShip = new Battleship();
+    static Boat submarine = new Submarine();
+    static Boat cruiser = new Cruiser();
+    static Boat destroyer = new Destroyer();
+    static int currentPlayer = 1;
+
+    public static List boatsList = List.of(aircraftCarrier, battleShip, submarine, cruiser, destroyer);
+
+    public static void playerTurn() {
+        if (currentPlayer == 1) {
+            fogOfWarP1.boardPrinter();
+            System.out.println("---------------------");
+            boardP1.boardPrinter();
+        } else if (currentPlayer == 2) {
+            fogOfWarP2.boardPrinter();
+            System.out.println("---------------------");
+            boardP2.boardPrinter();
+        }
+
+    }
+
+
     public static void main(String[] args) {
 
-        Board board = new Board();
-        Board fogOfWar = new Board();
-        Boat aircraftCarrier = new AircraftCarrier();
-        Boat battleShip = new Battleship();
-        Boat submarine = new Submarine();
-        Boat cruiser = new Cruiser();
-        Boat destroyer = new Destroyer();
 
 
-        List<Boat> boatsList = new ArrayList<>();
-        boatsList.add(aircraftCarrier);
-        boatsList.add(battleShip);
-        boatsList.add(submarine);
-        boatsList.add(cruiser);
-        boatsList.add(destroyer);
+        InputHandling.playerInitialization(currentPlayer);
+        boardP1.boardPrinter();
+        boardP1.boatPlacementPlayer(boatsList, boardP1);
+        currentPlayer = playerTurnChange();
+        InputHandling.promptEnterKey();
 
-        board.boardPrinter(board);
-        int errorCode;
-
-
-        for (int i = 0; i < boatsList.size(); i++) {
-            Boat boat = boatsList.get(i);
-            InputHandling input = new InputHandling(boat);
-            String userInput = input.coordsBoatRequest(boat);
-            errorCode = input.boatCoordsCheck(userInput);
-            if (errorCode == 0) {
-                errorCode = input.boatPositionCheck(userInput, boat, board);
-            }
-            if (errorCode == 0) {
-                input.boatPlacement(userInput, board);
-                board.boardPrinter(board);
-            } else {
-                input.errorCalls(errorCode, boat);
-                i--;
-            }
-        }
-
-
+        InputHandling.playerInitialization(currentPlayer);
+        boardP2.boardPrinter();
+        boardP2.boatPlacementPlayer(boatsList, boardP2);
         System.out.println("The game starts!");
-        Board.boardPrinter(fogOfWar);
+        currentPlayer = playerTurnChange();
+        InputHandling.promptEnterKey();
+        playerTurn();
 
-        InputHandling shot = new InputHandling(aircraftCarrier);
+        InputHandling shot = new InputHandling();
 
+        while (!shot.gameEndCheck(boardP1) || !shot.gameEndCheck(boardP2)) {
+            String shotInput = shot.shotCoordRequest();
+            int shotTest = shot.shotCoordsCheck(shot.shotCoordInput(shotInput));
 
-        String shotInput = shot.shotCoordRequest();
-        int shotTest = shot.shotCoordsCheck(shotInput);
-
-        if (shotTest != 0) {
-            shot.errorCalls(shotTest, aircraftCarrier);
-            while (shotTest != 0) {
-                shotInput = shot.shotCoordRequest();
-                shotTest = shot.shotCoordsCheck(shotInput);
+            if (shotTest != 0) {
                 shot.errorCalls(shotTest, aircraftCarrier);
+                while (shotTest != 0) {
+                    shotInput = shot.shotCoordRequest();
+                    shotTest = shot.shotCoordsCheck(shot.shotCoordInput(shotInput));
+                    shot.errorCalls(shotTest, aircraftCarrier);
+                }
             }
+            if (currentPlayer == 1) {
+                shot.shoot(shotInput, boardP2, fogOfWarP1);
+                shot.gameEndCheck(boardP2);
+            } else if (currentPlayer == 2) {
+                shot.shoot(shotInput, boardP1, fogOfWarP2);
+                shot.gameEndCheck(boardP1);
+            }
+            if (shot.gameEndCheck(boardP1) || shot.gameEndCheck(boardP2)) {
+                break;
+            }
+            currentPlayer = playerTurnChange();
+            InputHandling.promptEnterKey();
+            playerTurn();
         }
-        shot.shoot(shotInput, board, fogOfWar);
-        board.boardPrinter(board);
-
-
+        System.out.printf("\nPlayer %d, you sank the last ship. You won, congratulations!", currentPlayer);
     }
 }

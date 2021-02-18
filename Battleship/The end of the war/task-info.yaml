@@ -369,6 +369,390 @@ files:
         }
     }
   learner_created: false
+- name: src/battleship/Cruiser.java
+  visible: true
+  text: |
+    package battleship;
+
+    public class Cruiser extends Boat {
+
+        public Cruiser() {
+            super("Cruiser", 3);
+        }
+    }
+  learner_created: true
+- name: src/battleship/Submarine.java
+  visible: true
+  text: |
+    package battleship;
+
+    public class Submarine extends Boat {
+
+        public Submarine() {
+            super("Submarine", 3);
+        }
+    }
+  learner_created: true
+- name: src/battleship/Boat.java
+  visible: true
+  text: |
+    package battleship;
+
+    public class Boat {
+
+        String boatName;
+        int boatSize;
+
+        public Boat(String boatName, int boatSize) {
+            this.boatName = boatName;
+            this.boatSize = boatSize;
+        }
+
+
+    }
+  learner_created: true
+- name: src/battleship/Destroyer.java
+  visible: true
+  text: |
+    package battleship;
+
+    public class Destroyer extends Boat {
+
+        public Destroyer() {
+            super("Destroyer", 2);
+        }
+    }
+  learner_created: true
+- name: src/battleship/InputHandling.java
+  visible: true
+  text: |
+    package battleship;
+
+    import java.util.Scanner;
+
+    import static battleship.Boat.*;
+
+
+    public class InputHandling {
+        Scanner scanner = new Scanner(System.in);
+
+        Boat boat;
+
+        public InputHandling(Boat boat) {
+
+            this.boat = boat;
+        }
+
+
+
+        public String coordsBoatRequest(Boat boat) {
+            System.out.printf("\nEnter the coordinates of the %s (%d cells):\n", boat.boatName, boat.boatSize);
+            String userInput = scanner.nextLine();
+            return userInput;
+        }
+
+        public int[] coordsInput(String userInput) {
+            String[] userString = userInput.split(" ");
+            String point1 = userString[0];
+            String point2 = userString[1];
+            int yPoint1 = 0;
+            int xPoint1 = 0;
+            int yPoint2 = 0;
+            int xPoint2 = 0;
+
+
+
+            yPoint1 = point1.charAt(0) - 64;
+            if (point1.length() > 2) {
+                xPoint1 = Character.getNumericValue(point1.charAt(1)) * 10 + Character.getNumericValue(point1.charAt(2));
+            } else {
+                xPoint1 = Character.getNumericValue(point1.charAt(1));
+            }
+            yPoint2 = point2.charAt(0) - 64;
+            if (point2.length() > 2) {
+                xPoint2 = Character.getNumericValue(point2.charAt(1)) * 10 + Character.getNumericValue(point2.charAt(2));
+            } else {
+                xPoint2 = Character.getNumericValue(point2.charAt(1));
+            }
+            int[] coordsInput = {yPoint1, xPoint1, yPoint2, xPoint2};
+            return coordsInput;
+        }
+
+        public int boatCoordsCheck (String userInput) {
+            int errorCode = 0;
+            int[] userCoords = coordsInput(userInput);
+            int yPoint1 = userCoords[0];
+            int xPoint1 = userCoords[1];
+            int yPoint2 = userCoords[2];
+            int xPoint2 = userCoords[3];
+
+
+            if (yPoint1 < 1 || yPoint1 > 10) {
+                return 101;
+            } else if (xPoint1 < 1 || xPoint1 > 10) {
+                return 102;
+            } else if (yPoint2 < 1 || yPoint2 > 10) {
+                return 103;
+            } else if (xPoint2 < 1 || xPoint2 > 10) {
+                return 104;
+            } else if (userInput.length() < 5 || userInput.length() > 7) {
+                return 105;
+            }
+
+            if (yPoint1 != yPoint2 && xPoint1 != xPoint2) {
+                return 201;
+            }
+            return errorCode;
+        }
+
+        public int boatPositionCheck(String userInput, Boat boat, Board board) {
+            int errorCode = 0;
+            int[] userCoords = coordsInput(userInput);
+            int yPoint1 = userCoords[0];
+            int xPoint1 = userCoords[1];
+            int yPoint2 = userCoords[2];
+            int xPoint2 = userCoords[3];
+
+            try {
+                if (yPoint1 == yPoint2) {
+                    if (Math.max(xPoint1, xPoint2) - Math.min(xPoint1, xPoint2) + 1 != boat.boatSize) {
+                        return 202;
+                    } else {
+                        for (int boatSegment = Math.min(xPoint1, xPoint2) - 1; boatSegment < boat.boatSize + 1 + Math.min(xPoint1, xPoint2); boatSegment++) {
+                            System.out.println(boatSegment);
+                            if (board.pointIsBoat(yPoint1, boatSegment) ||
+                                    board.pointIsBoat(yPoint1 + 1, boatSegment) ||
+                                    board.pointIsBoat(yPoint1 - 1, boatSegment)) {
+                                return 203;
+                            }
+
+                        }
+                    }
+                } else if (xPoint1 == xPoint2) {
+                    if (Math.max(yPoint1, yPoint2) - Math.min(yPoint1, yPoint2) + 1 != boat.boatSize) {
+                        return 202;
+                    } else {
+                        for (int boatSegment = Math.min(yPoint1, yPoint2) - 1; boatSegment < boat.boatSize + 1 + Math.min(yPoint1, yPoint2); boatSegment++) {
+                            System.out.println(boatSegment);
+                            if (board.pointIsBoat(boatSegment, xPoint1) ||
+                                    board.pointIsBoat(boatSegment, xPoint1 + 1) ||
+                                    board.pointIsBoat(boatSegment, xPoint1 - 1)) {
+                                return 203;
+                            }
+
+                        }
+                    }
+                }
+            }
+            catch (ArrayIndexOutOfBoundsException e) {
+            }
+            return errorCode;
+        }
+
+
+
+        public void boatPlacement(String userInput, Board board) {
+
+            int[] userCoords = coordsInput(userInput);
+            int yPoint1 = userCoords[0];
+            int xPoint1 = userCoords[1];
+            int yPoint2 = userCoords[2];
+            int xPoint2 = userCoords[3];
+
+            if (yPoint1 == yPoint2) {
+                for (int cell = Math.min(xPoint1, xPoint2); cell <= Math.max(xPoint1, xPoint2); cell++) {
+                    board.setBoat(yPoint1, cell);
+                }
+            }
+            if (xPoint1 == xPoint2) {
+                for (int cell = Math.min(yPoint1, yPoint2); cell <= Math.max(yPoint1, yPoint2); cell++) {
+                    board.setBoat(cell, xPoint1);
+                }
+            }
+        }
+
+        public String shotCoordRequest() {
+            System.out.println("Take a shot!");
+            String userInput = scanner.nextLine();
+            return userInput;
+        }
+
+        public int[] shotCoordInput(String userInput) {
+            int yPoint = 0;
+            int xPoint = 0;
+
+            yPoint = userInput.charAt(0) - 64;
+            if (userInput.length() > 2) {
+                xPoint = Character.getNumericValue(userInput.charAt(1)) * 10 + Character.getNumericValue(userInput.charAt(2));
+            } else {
+                xPoint = Character.getNumericValue(userInput.charAt(1));
+            }
+            int[] shotCoord = {yPoint, xPoint};
+            return shotCoord;
+        }
+
+        public int shotCoordsCheck (String userInput) {
+            int errorCode = 0;
+            int[] shotCoord = shotCoordInput(userInput);
+            int yPoint = shotCoord[0];
+            int xPoint = shotCoord[1];
+
+
+            if (yPoint < 1 || yPoint > 10) {
+                errorCode = 301;
+            } else if (xPoint < 1 || xPoint > 10) {
+                errorCode = 302;
+            } else if (userInput.length() < 2 || userInput.length() > 3) {
+                errorCode = 303;
+            }
+
+            return errorCode;
+        }
+
+
+
+        public void shoot (String userInput, Board board, Board fogOfWar) {
+            int[] shotCoord = shotCoordInput(userInput);
+            int yPoint = shotCoord[0];
+            int xPoint = shotCoord[1];
+            if (board.pointAt(yPoint, xPoint).equals("O ")) {
+                board.setHit(yPoint, xPoint);
+                fogOfWar.setHit(yPoint, xPoint);
+                fogOfWar.boardPrinter();
+                System.out.println("You hit a ship!");
+
+            } else if (board.pointAt(yPoint, xPoint).equals("~ ")) {
+                board.setMiss(yPoint, xPoint);
+                fogOfWar.setMiss(yPoint, xPoint);
+                fogOfWar.boardPrinter();
+                System.out.println("You missed!");
+            }
+        }
+
+
+        public void errorCalls(int errorCode, Boat boat) {
+            switch (errorCode) {
+                case 101: System.out.println("Error! Letter of first coordinate out of bounds of board.");
+                    break;
+                case 102:
+                    System.out.println("Error! Number of first coordinate out of bounds of board.");
+                    break;
+                case 103: System.out.println("Error! Letter of second coordinate out of bounds of board.");
+                    break;
+                case 104:
+                    System.out.println("Error! Number of second coordinate out of bounds of board.");
+                    break;
+                case 105: System.out.println("Error! Incorrect coordinate format. Should be of type X1 Y2");
+                    break;
+                case 201:
+                    System.out.println("Error! Wrong ship location, must be placed vertically or horizontally on the board");
+                    break;
+                case 202: System.out.printf("Error! Wrong length of the %s! Try again:\n", boat.boatName);
+                    break;
+                case 203: System.out.println("Error! You placed it too close to another one. Try again:");
+                    break;
+                case 301: System.out.println("Error! Letter of shot coordinate out of bounds of board.");
+                    break;
+                case 302:
+                    System.out.println("Error! Number of shot coordinate out of bounds of board.");
+                    break;
+                case 303: System.out.println("Error! Incorrect coordinate format. Should be of type X1");
+                    break;
+                default:
+                    break;
+            }
+        }
+    }
+  learner_created: true
+- name: src/battleship/AircraftCarrier.java
+  visible: true
+  text: |
+    package battleship;
+
+    public class AircraftCarrier extends Boat {
+
+        public AircraftCarrier() {
+            super("Aircraft Carrier", 5);
+        }
+    }
+  learner_created: true
+- name: src/battleship/Board.java
+  visible: true
+  text: |+
+    package battleship;
+
+    public class Board {
+        private String[][] board = new String[11][11];
+
+
+        public Board() {
+
+            for (int row = 0; row < 11; row++) {
+                for (int col = 0; col < 11; col++) {
+                    if (row == 0 && col == 0) {
+                        board[row][col] = " " + " ";
+                    } else if (row == 0 && col > 0) {
+                        board[row][col] = col + " ";
+                    } else if (col == 0 && row > 0) {
+                        board[row][col] = Character.toString((65 + row - 1)) + " ";
+                    } else {
+                        board[row][col] = "~" + " ";
+                    }
+                }
+            }
+        }
+
+        public String pointAt(int row, int col) {
+            return board[row][col];
+        }
+
+        public boolean pointIsBoat(int row, int col) {
+            return board[row][col].equals("O ");
+        }
+
+        public void setBoat(int row, int col) {
+            board[row][col] = "O ";
+        }
+
+
+        public void setHit(int row, int col) {
+            board[row][col] = "X ";
+        }
+
+        public void setMiss(int row, int col) {
+            board[row][col] = "M ";
+        }
+
+
+        public void boardPrinter() {
+            for (int row = 0; row < 11; row++) {
+                for (int col = 0; col < 11; col++) {
+                    System.out.print(board[row][col]);
+                }
+                System.out.println();
+            }
+        }
+
+
+    }
+
+  learner_created: true
+- name: src/battleship/Battleship.java
+  visible: true
+  text: |
+    package battleship;
+
+    public class Battleship extends Boat {
+
+        public Battleship() {
+            super("Battleship", 4);
+        }
+    }
+  learner_created: true
 feedback_link: https://hyperskill.org/projects/125/stages/666/implement
-status: Unchecked
-record: -1
+status: Solved
+feedback:
+  message: Congratulations! Continue on <a href="https://hyperskill.org/projects/125/stages/666/implement">JetBrains
+    Academy</a>
+  time: Mon, 15 Feb 2021 10:25:02 UTC
+record: 4
