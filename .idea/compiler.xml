@@ -12,6 +12,8 @@
       <module name="Problems-Bank_account_test" target="11" />
       <module name="Problems-Convert_to_bytes_main" target="11" />
       <module name="Problems-Convert_to_bytes_test" target="11" />
+      <module name="Problems-Convert_to_char_array_main" target="11" />
+      <module name="Problems-Convert_to_char_array_test" target="11" />
       <module name="Problems-Count_words_main" target="11" />
       <module name="Problems-Count_words_test" target="11" />
       <module name="Problems-Danger_levels_main" target="11" />

@@ -10,6 +10,9 @@ files:
         abstract double getArea();
     }
   learner_created: false
+- name: src/SecretMessage.java
+  visible: true
+  learner_created: true
 feedback_link: https://hyperskill.org/learn/step/2120
 status: Solved
 feedback:
